@@ -18,7 +18,7 @@ app.get('/',(req,res)=>{
 app.use('/api/user',userRouter)
 app.use('/api/image',imageRouter)
 await connectDB();
-const PORT = process.env.PORT || https://imagify-2-backend.onrender.com;
+const PORT = process.env.PORT || "https://imagify-2-backend.onrender.com";
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
