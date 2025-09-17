@@ -18,7 +18,7 @@ const Login = () => {
 
         try {
             if(state === "Login"){
-              const  {data} =  await axios.post('http://localhost:4000/api/user/login' ,{email,password})
+              const  {data} =  await axios.post('https://imagify-2-backend.onrender.com/api/user/login' ,{email,password})
               if(data.success){
                 setToken(data.token)
                 setUser(data.user)
@@ -30,7 +30,7 @@ const Login = () => {
               }
 
             }else{
-                const  {data} =  await axios.post('http://localhost:4000/api/user/register' ,{name,email,password})
+                const  {data} =  await axios.post('https://imagify-2-backend.onrender.com/api/user/register' ,{name,email,password})
               if(data.success){
                 setToken(data.token)
                 setUser(data.user)
